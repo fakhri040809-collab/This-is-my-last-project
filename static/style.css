@@ -1,0 +1,416 @@
+body{
+          background-color: lightblue;
+          font-family: 'Inter', sans-serif;
+          margin: 20px;
+}
+
+nav{
+          background-color: #ffabeb;
+          color: #fff;
+          padding: 10px;
+          text-align: center;
+}
+
+nav a{
+          color: #000;
+          text-decoration: none;
+          margin: 0 10px;
+}
+
+h1{
+          color: #333;
+          text-align: center;
+}
+
+h2{
+          color: #333;
+          text-align: center;
+}
+
+img{
+          display: block;
+          margin: 0 auto;
+          border-radius: 25%;
+          border: 10px solid hsl(257, 100%, 50%);
+
+}
+
+form{
+          background-color: #fff;
+          padding: 20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          max-width: 400px;
+          margin: 20px auto;
+}
+
+button, button a{
+          background-color: #e399fc;
+          color: #fff;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.project-gallery{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 20px;
+}
+
+.project-card{
+          background-color:rgb(255, 255, 182);
+          border-radius: 5px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+          max-width: 400px;
+          margin: 20px auto;
+}
+
+.project-header{
+    text-align: center;
+    margin: 40px 0;
+}
+.project-card img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border: none;
+    border-radius: 0;
+}
+.project-content{
+    padding: 20px;
+}
+.project-content button {
+    margin-top: 5px;
+}
+
+@media(min-width: 801px) {
+          .project-gallery{
+                    grid-template-columns: repeat(3, 1fr);
+          }
+
+}
+
+@media (min-width: 600px) and (max-width: 800px) {
+          nav a{
+          .project-gallery{
+                    grid-template-columns: repeat(2, 1fr);
+          }
+}
+
+@media (max-width: 600px) {
+          nav{
+                   flex-direction: column;
+                   align-items: center;
+          }
+
+          nav a{
+                    margin: 5px 0;
+          }
+          .project-gallery{
+                    grid-template-columns: 1fr;
+          }
+          .project-card{
+                    max-width: 90%;
+          }
+}
+
+
+
+/* =========================================
+   PALET WARNA (Ubah warna di sini saja!)
+   ========================================= */
+   :root {
+    /* Warna Utama (Sekarang Biru) */
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+
+
+    /* Warna Teks */
+    --text-dark: #1e293b;
+    --text-sub: #2f3946;
+    --text-muted: #64748b;
+    --text-light: #ffffff;
+
+
+    /* Warna Background & Border */
+    --bg-card: #f8fafc;
+    --bg-secondary: #e2e8f0;
+    --bg-secondary-hover: #cbd5e1;
+    --border-color: #e2e8f0;
+
+
+    /* Warna Khusus (Badge & Timeline) */
+    --badge-bg: #e0f2fe;
+    --badge-text: #0369a1;
+    --timeline-date-bg: #eff6ff;
+}
+
+
+/* =========================================
+   STYLE UNTUK HALAMAN HOME (INDEX.HTML)
+   ========================================= */
+
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+
+.hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-sub);
+    margin-bottom: 1.5rem;
+}
+
+
+.hero-img-container {
+    margin: 1.5rem 0;
+}
+
+
+.hero-img {
+    max-width: 300px;
+    border-radius: 12px;
+}
+
+
+/* Call to Action Buttons */
+.cta-buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+
+.btn-secondary {
+    background-color: var(--bg-secondary);
+    color: var(--text-dark);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.btn-secondary:hover {
+    background-color: var(--bg-secondary-hover);
+}
+
+
+/* Quick Features Section */
+.quick-features {
+    margin-top: 4rem;
+}
+
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+
+/* Card Style */
+.card {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* Efek saat card disorot mouse (hover) */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+
+.card-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0.5rem 0 1rem 0;
+}
+
+
+.card-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   STYLE UNTUK SKILLS.HTML
+   ========================================= */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+}
+
+
+.badge {
+    background-color: var(--badge-bg);
+    color: var(--badge-text);
+    padding: 0.3rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+.level-text {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+
+.progress-bar-container {
+    background-color: var(--bg-secondary);
+    border-radius: 9999px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.progress-bar {
+    background-color: var(--primary);
+    height: 100%;
+    border-radius: 9999px;
+    transition: width 1s ease-in-out;
+}
+
+
+/* =========================================
+   STYLE UNTUK EXPERIENCE.HTML (TIMELINE)
+   ========================================= */
+.timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    border-left: 3px solid var(--bg-secondary-hover);
+}
+
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2.5rem;
+}
+
+
+/* Titik warna utama pada timeline */
+.timeline-dot {
+    position: absolute;
+    left: -2.4rem;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    border: 3px solid var(--text-light);
+    box-shadow: 0 0 0 2px var(--primary);
+}
+
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    background-color: var(--timeline-date-bg);
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+}
+
+
+.timeline-content {
+    background-color: var(--bg-card);
+    padding: 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+
+.timeline-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+
+.timeline-content p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.flash-message {
+    max-width: 400px;
+    margin: 1rem auto;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+}
+
+.flash-message.success {
+    color: #14532d;
+    background: #dcfce7;
+    border: 1px solid #86efac;
+}

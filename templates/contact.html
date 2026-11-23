@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+
+<div class="contact-container">
+    <h1>Hubungi Saya!</h1>
+    <p>Masukan pesanmu di form di bawah ini:</p>
+
+    <form action="{{ url_for('contact') }}" method="POST">
+
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name"
+               placeholder="Masukkan nama kamu" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"
+               placeholder="Masukkan email kamu" required>
+
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message"
+                  placeholder="Tulis pesan kamu..." required></textarea>
+
+        <button type="submit">Kirim</button>
+        <button type="reset">Reset</button>
+
+        <a href="{{ url_for('index') }}">Kembali</a>
+    </form>
+</div>
+
+{% endblock %}

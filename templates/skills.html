@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Skills{% endblock %}
+{% block content %}
+
+<section class="skills">
+          <h1>Skills</h1>
+<p>Berikut adalah beberapa keterampilan yang saya miliki:</p>
+          <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Flask</li>
+                    <li>SQL</li>
+          </ul>
+          <div class="skills-image-container">
+                    <img src={{ url_for('static', filename="images/skills.png") }} alt="Skills" class="skills-image">
+          </div>
+          <div class="skill grid">
+                    {% for skill in skills %}
+                    <div class="skill-item">
+                              <h3>{{ skill.name }}</h3>
+                              <p>{{ skill.description }}</p>
+                    </div>
+                    {% endfor %}
+          </div>
+</section>
+
+{% endblock %}

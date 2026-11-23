@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Experience{% endblock %}
+{% block content %}
+
+<section class="experience">
+          <h1>Experience</h1>
+          <p>Berikut adalah pengalaman kerja dan proyek yang telah saya lakukan:</p>
+          <ul>
+        <li>Magang di Perusahaan XYZ sebagai Web Developer (Januari 2022 - Juni 2022)</li>
+        <li>Proyek EduHub: Platform pembelajaran online (Juli 2022 - Desember 2022)</li>
+        <li>Proyek Edulab Interactive Simulation: Simulasi interaktif untuk pembelajaran sains (Januari 2023 - Sekarang)</li>
+          </ul>
+<div class="experience-image-container">
+          <img src={{ url_for('static', filename="images/experience.png") }} alt="Experience" class="experience-image">
+    </div>
+</section>
+
+{% endblock %}
